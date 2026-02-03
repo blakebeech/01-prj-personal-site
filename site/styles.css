@@ -102,7 +102,8 @@ a:hover {
 }
 
 .section {
-  padding: 70px 0;
+  /* Extra breathing room between sections */
+  padding: 80px 0;
 }
 
 .page-header {
@@ -110,7 +111,8 @@ a:hover {
 }
 
 .section-header {
-  margin-bottom: var(--space-3);
+  /* Give headings a bit more space from content */
+  margin-bottom: var(--space-4);
 }
 
 .section-subtitle {
@@ -455,19 +457,32 @@ h1 {
 .grid-4 {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  /* Slightly larger gap so cards don't feel cramped */
+  gap: 24px;
+}
+
+/* Stack card lists with clear spacing */
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Add space between skill groups */
+.skills-group {
+  margin-bottom: var(--space-4);
 }
 
 .grid-2 > * {
-  flex: 1 1 320px;
+  flex: 1 1 50px;
 }
 
 .grid-3 > * {
-  flex: 1 1 260px;
+  flex: 1 1 50px;
 }
 
 .grid-4 > * {
-  flex: 1 1 220px;
+  flex: 1 1 50px;
 }
 
 /* ---------- Project Cards ---------- */

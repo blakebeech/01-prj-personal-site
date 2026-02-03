@@ -3,261 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blake Beecher — Product-Minded Builder</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Redirecting to the portfolio</title>
+  <!-- Meta refresh for fast redirect -->
+  <meta http-equiv="refresh" content="0; url=site/index.html" />
+  <!-- Basic description for link previews -->
+  <meta name="description" content="Redirecting to the portfolio site." />
+  <script>
+    // JavaScript fallback redirect
+    window.location.replace("site/index.html");
+  </script>
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
-  <a class="skip-link" href="#home">Skip to main content</a>
+  <!-- Fallback link for users with JavaScript disabled -->
+  <noscript>
+    <p>Redirecting to the portfolio site. If you are not redirected, use the link below.</p>
+  </noscript>
+  <p>
+    If you are not redirected automatically, visit
+    <a href="site/index.html">the portfolio site</a>.
+  </p>
 
-  <!-- Sticky Navigation -->
-  <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#home">Blake Beecher</a>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#recruiters">Recruiters</a>
-        <a href="#projects">Projects</a>
-        <a href="#how">How I Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-cta">
-        <a class="btn btn-outline" href="#">Download Resume</a>
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="home">
-    <!-- Hero Section -->
-    <section class="section hero container" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Student • Founder • Product Builder · Charlotte, NC</p>
-          <h1 id="hero-title">Digital Products, Automation, &amp; AI for Real-World Challenges</h1>
-          <p class="lead">Product-minded operator focused on systems, measurable outcomes, and stakeholder-led delivery.</p>
-          <p class="sublead">I build with an execution-first mindset—translating messy reality into clear workflows that teams can ship.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-outline" href="#">Download Resume</a>
-          </div>
-        </div>
-
-        <!-- Headshot image -->
-        <div class="hero-image">
-          <img src="img/2.png" alt="Blake Beecher headshot" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Recruiter Section -->
-    <section class="section container" id="recruiters" aria-labelledby="recruiters-title">
-      <div class="section-header">
-        <h2 id="recruiters-title">What Recruiters Should Know</h2>
-        <p class="section-subtitle">Three things that set me apart as a product candidate.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Operator Mindset</h3>
-          <p>I run a real business—balancing customers, crews, cash flow, and operational reality.</p>
-          <p class="proof">Proof signal: Improved job close rate by 18% through better intake.</p>
-        </article>
-        <article class="card">
-          <h3>Automation + Systems</h3>
-          <p>CRM pipelines, workflow automation, and scalable systems rooted in AI concepts.</p>
-          <p class="proof">Proof signal: Cut manual admin time by 12+ hours/week.</p>
-        </article>
-        <article class="card">
-          <h3>Stakeholder-Led Delivery</h3>
-          <p>Executive presentations, cross-functional alignment, and clear communication.</p>
-          <p class="proof">Proof signal: Earned stakeholder buy-in across 3 departments.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section container" id="projects" aria-labelledby="projects-title">
-      <div class="section-header">
-        <h2 id="projects-title">Featured Projects</h2>
-        <p class="section-subtitle">Click any project to view the full case study.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card project-card">
-          <div class="pill">Shipped</div>
-          <h3>Dump Junkies CLT — CRM &amp; Operations Automation</h3>
-          <p>Built pipelines, automations, and ops workflows in Go High Level to improve speed and reliability.</p>
-          <div class="chips">
-            <span class="chip">Go High Level</span>
-            <span class="chip">Automation</span>
-            <span class="chip">Operations</span>
-          </div>
-          <p class="impact"><strong>Impact:</strong> Increased lead-to-job conversion by 18%.</p>
-          <a class="project-link" href="#">View Case Study →</a>
-        </article>
-
-        <article class="card project-card">
-          <div class="pill">Concept</div>
-          <h3>Move &amp; Remove AI — Computer Vision Quoting</h3>
-          <p>Concept for AI-assisted quoting using photos to estimate load size and pricing.</p>
-          <div class="chips">
-            <span class="chip">Computer Vision</span>
-            <span class="chip">Pricing</span>
-            <span class="chip">MVP</span>
-          </div>
-          <p class="impact"><strong>Impact:</strong> Targeting 30% faster quote turnaround.</p>
-          <a class="project-link" href="#">View Case Study →</a>
-        </article>
-
-        <article class="card project-card">
-          <div class="pill">Consulting</div>
-          <h3>Ember Group Consulting — Stakeholder Mapping + PPC Toolkit Support</h3>
-          <p>Delivered stakeholder research, mapping, and toolkit support for PPC initiatives.</p>
-          <div class="chips">
-            <span class="chip">Stakeholders</span>
-            <span class="chip">Research</span>
-            <span class="chip">Enablement</span>
-          </div>
-          <p class="impact"><strong>Impact:</strong> Enabled faster alignment on campaign priorities.</p>
-          <a class="project-link" href="#">View Case Study →</a>
-        </article>
-
-        <article class="card project-card">
-          <div class="pill">Research</div>
-          <h3>Novant Health — Innovation Research</h3>
-          <p>Market scans and wireless vital monitoring research to guide innovation strategy.</p>
-          <div class="chips">
-            <span class="chip">Market Scans</span>
-            <span class="chip">Healthcare</span>
-            <span class="chip">Synthesis</span>
-          </div>
-          <p class="impact"><strong>Impact:</strong> Informed strategic pathways for new pilots.</p>
-          <a class="project-link" href="#">View Case Study →</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- How I Work Section -->
-    <section class="section container" id="how" aria-labelledby="how-title">
-      <div class="section-header">
-        <h2 id="how-title">How I Work</h2>
-        <p class="section-subtitle">A structured approach to building products that solve real problems.</p>
-      </div>
-      <p class="operator-line">Operator-first: I optimize for execution and measurable outcomes.</p>
-      <div class="card-grid">
-        <article class="card step-card">
-          <div class="step-number">01</div>
-          <h3>Discover</h3>
-          <p>Research, interviews, and listening for real constraints.</p>
-        </article>
-        <article class="card step-card">
-          <div class="step-number">02</div>
-          <h3>Define</h3>
-          <p>Problem statement, success metrics, and clear requirements.</p>
-        </article>
-        <article class="card step-card">
-          <div class="step-number">03</div>
-          <h3>Build</h3>
-          <p>Rapid prototyping and iterative delivery with feedback loops.</p>
-        </article>
-        <article class="card step-card">
-          <div class="step-number">04</div>
-          <h3>Measure</h3>
-          <p>Outcomes, insights, and the next iteration plan.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section container" id="experience" aria-labelledby="experience-title">
-      <div class="section-header">
-        <h2 id="experience-title">Experience</h2>
-        <p class="section-subtitle">Focused roles and hands-on impact.</p>
-      </div>
-      <div class="stacked-cards">
-        <article class="card">
-          <h3>Founder — Dump Junkies CLT</h3>
-          <p>Built ops systems, sales workflows, and automations for daily execution.</p>
-        </article>
-        <article class="card">
-          <h3>Consulting Intern — Ember Group Consulting</h3>
-          <p>Created stakeholder maps and supported PPC toolkit delivery.</p>
-        </article>
-        <article class="card">
-          <h3>Innovation Research — Novant Health</h3>
-          <p>Conducted market scans and synthesized insights for new pilots.</p>
-        </article>
-        <article class="card">
-          <h3>University of South Carolina</h3>
-          <p>Management, Marketing, and Entrepreneurship.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section container" id="skills" aria-labelledby="skills-title">
-      <div class="section-header">
-        <h2 id="skills-title">Skills</h2>
-        <p class="section-subtitle">Practical, product-focused capabilities.</p>
-      </div>
-      <div class="skills-group">
-        <h3 class="skills-title">Product</h3>
-        <div class="chips">
-          <span class="chip">Discovery</span>
-          <span class="chip">Requirements</span>
-          <span class="chip">Prioritization</span>
-          <span class="chip">Stakeholder Alignment</span>
-        </div>
-      </div>
-      <div class="skills-group">
-        <h3 class="skills-title">Systems / Automation</h3>
-        <div class="chips">
-          <span class="chip">CRM</span>
-          <span class="chip">Pipelines</span>
-          <span class="chip">Workflow Automation</span>
-          <span class="chip">Forms</span>
-        </div>
-      </div>
-      <div class="skills-group">
-        <h3 class="skills-title">Tools</h3>
-        <div class="chips">
-          <span class="chip">Go High Level</span>
-          <span class="chip">HubSpot (Familiar)</span>
-          <span class="chip">Microsoft 365</span>
-          <span class="chip">Power BI (Optional)</span>
-          <span class="chip">DocuSign (Optional)</span>
-        </div>
-      </div>
-      <div class="skills-group">
-        <h3 class="skills-title">Research</h3>
-        <div class="chips">
-          <span class="chip">Market Scans</span>
-          <span class="chip">Competitive Analysis</span>
-          <span class="chip">Synthesis</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section container" id="contact" aria-labelledby="contact-title">
-      <div class="section-header">
-        <h2 id="contact-title">Let’s Build Together</h2>
-        <p class="section-subtitle">Looking for a Product Manager, Associate PM, or Product Analyst role where I can contribute from day one.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:beechclt@gmail.com">Email</a>
-        <a class="btn btn-outline" href="#">LinkedIn</a>
-        <a class="btn btn-outline" href="#">Download Resume</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Blake Beecher</p>
-    </div>
-  </footer>
+  <!-- New: simple links for resume and LinkedIn -->
+  <p>
+    <!-- Resume file link (update the href if your file name is different) -->
+    <a href="resume.pdf">View my resume</a>
+  </p>
+  <p>
+    <!-- LinkedIn profile link -->
+    <a href="https://www.linkedin.com/in/blake-beecher-66983b181/">My LinkedIn</a>
+  </p>
 </body>
 </html>

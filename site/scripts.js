@@ -53,11 +53,10 @@ function injectNavFooter() {
           <a data-nav-link data-page="about.html" href="about.html">About</a>
           <a data-nav-link data-page="projects.html" href="projects.html">Projects</a>
           <a data-nav-link data-page="experience.html" href="experience.html">Experience</a>
-          <a data-nav-link data-page="skills.html" href="skills.html">Skills</a>
           <a data-nav-link data-page="contact.html" href="contact.html">Contact</a>
         </div>
         <div class="nav-cta">
-          <a class="btn btn-outline" href="#">Download Resume</a>
+          <a class="btn btn-outline" href="assets/Blake Beecher Resume - 2026.pdf">Download Resume</a>
           <a class="btn btn-primary" href="projects.html">View Projects</a>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -83,8 +82,8 @@ function injectNavFooter() {
         <div class="footer-actions">
           <a class="btn btn-outline" href="mailto:${siteConfig.email}">Email</a>
           <button class="btn btn-outline" data-copy-email>Copy Email</button>
-          <a class="btn btn-outline" href="#">Resume</a>
-          <a class="footer-icon" href="#" aria-label="LinkedIn">
+          <a class="btn btn-outline" href="assets/Blake Beecher Resume - 2026.pdf">Resume</a>
+          <a class="footer-icon" href="https://www.linkedin.com/in/blake-beecher-66983b181/" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M6 9v9M6 6v.1" />
               <path d="M10 9v9M10 13a3 3 0 0 1 6 0v5" />
