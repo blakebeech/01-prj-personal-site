@@ -1,0 +1,358 @@
+/*
+  Blake Beecher — One Page Portfolio
+  Simple, beginner-friendly CSS with comments.
+*/
+
+/* ---------- Base styles ---------- */
+:root {
+  /* Color palette */
+  --bg: #f7f8fb;
+  --text: #0f172a;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --accent: #1e3a8a; /* Deep blue */
+  --accent-dark: #162e6e;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Utility classes ---------- */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 4px 6px 0 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: #e0e7ff;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------- Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 248, 251, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-top: 90px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.sublead {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Hero layout with image */
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-grid > div {
+  flex: 1 1 320px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Cards / Grids ---------- */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-grid .card {
+  flex: 1 1 240px;
+  min-width: 240px;
+}
+
+.project-card .impact {
+  margin-top: 10px;
+  color: var(--text);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.proof {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.operator-line {
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.step-card {
+  text-align: left;
+}
+
+.step-number {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-group {
+  margin-bottom: 18px;
+}
+
+.skills-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* ---------- Contact ---------- */
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0 40px;
+  color: var(--muted);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-cta {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+}

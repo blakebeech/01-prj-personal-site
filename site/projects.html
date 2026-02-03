@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Blake Beecher</title>
+  <meta name="description" content="Explore case studies across automation, AI, consulting, and research." />
+  <meta property="og:title" content="Projects — Blake Beecher" />
+  <meta property="og:description" content="Case studies focused on systems, automation, and stakeholder delivery." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <!-- Page Header -->
+    <section class="section page-header">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="section-subtitle">Case studies focused on real-world constraints, clear systems, and measurable outcomes.</p>
+      </div>
+    </section>
+
+    <!-- Filters + Search -->
+    <section class="section">
+      <div class="container">
+        <div class="filters" data-filter-group>
+          <button class="pill pill-button" data-filter="all">All</button>
+          <button class="pill pill-button" data-filter="shipped">Shipped</button>
+          <button class="pill pill-button" data-filter="concept">Concept</button>
+          <button class="pill pill-button" data-filter="consulting">Consulting</button>
+          <button class="pill pill-button" data-filter="research">Research</button>
+        </div>
+
+        <div class="search-row">
+          <label for="project-search" class="sr-only">Search projects</label>
+          <input id="project-search" class="search-input" type="text" placeholder="Search by title or tag" data-search />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section">
+      <div class="container grid-2" data-project-grid>
+        <article class="card card-hover project-card" data-status="shipped" data-tags="go high level automation operations crm">
+          <div class="pill">Shipped</div>
+          <h3>Dump Junkies CLT — CRM &amp; Operations Automation</h3>
+          <p>Built pipelines, automations, and ops workflows to improve speed and reliability.</p>
+          <div class="chips">
+            <span class="chip">Go High Level</span>
+            <span class="chip">Automation</span>
+            <span class="chip">Operations</span>
+          </div>
+          <p class="impact"><strong>Impact:</strong> Increased lead-to-job conversion by 18%.</p>
+          <a class="project-link" href="project-dump-junkies.html">View Case Study →</a>
+        </article>
+
+        <article class="card card-hover project-card" data-status="concept" data-tags="computer vision ai pricing mvp">
+          <div class="pill">Concept</div>
+          <h3>Move &amp; Remove AI — Computer Vision Quoting</h3>
+          <p>Concept for AI-assisted quoting using photos to estimate load size and pricing.</p>
+          <div class="chips">
+            <span class="chip">Computer Vision</span>
+            <span class="chip">Pricing</span>
+            <span class="chip">MVP</span>
+          </div>
+          <p class="impact"><strong>Impact:</strong> Targeting 30% faster quote turnaround.</p>
+          <a class="project-link" href="project-move-remove-ai.html">View Case Study →</a>
+        </article>
+
+        <article class="card card-hover project-card" data-status="consulting" data-tags="stakeholder mapping ppc consulting">
+          <div class="pill">Consulting</div>
+          <h3>Ember Group Consulting — Stakeholder Mapping + PPC Toolkit Support</h3>
+          <p>Delivered stakeholder research, mapping, and toolkit support for PPC initiatives.</p>
+          <div class="chips">
+            <span class="chip">Stakeholders</span>
+            <span class="chip">Research</span>
+            <span class="chip">Enablement</span>
+          </div>
+          <p class="impact"><strong>Impact:</strong> Enabled faster alignment on campaign priorities.</p>
+          <a class="project-link" href="project-ember-ppc-toolkit.html">View Case Study →</a>
+        </article>
+
+        <article class="card card-hover project-card" data-status="research" data-tags="market scans healthcare research">
+          <div class="pill">Research</div>
+          <h3>Novant Health — Innovation Research</h3>
+          <p>Market scans and wireless vital monitoring research to guide innovation strategy.</p>
+          <div class="chips">
+            <span class="chip">Market Scans</span>
+            <span class="chip">Healthcare</span>
+            <span class="chip">Synthesis</span>
+          </div>
+          <p class="impact"><strong>Impact:</strong> Informed strategic pathways for new pilots.</p>
+          <a class="project-link" href="project-novant-innovation.html">View Case Study →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Case Study Format -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Case Study Format</h2>
+          <p class="section-subtitle">Each case study follows a consistent structure for quick review.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Context</h3>
+            <p>Background, constraints, and business goals.</p>
+          </div>
+          <div class="card">
+            <h3>Problem + Role</h3>
+            <p>Problem statement, scope, and my role.</p>
+          </div>
+          <div class="card">
+            <h3>Approach</h3>
+            <p>Discovery, requirements, and decision process.</p>
+          </div>
+          <div class="card">
+            <h3>Solution</h3>
+            <p>Key features, workflows, and delivery plan.</p>
+          </div>
+          <div class="card">
+            <h3>Impact</h3>
+            <p>Measurable outcomes and business results.</p>
+          </div>
+          <div class="card">
+            <h3>Learnings</h3>
+            <p>What worked, what changed, and next steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>
