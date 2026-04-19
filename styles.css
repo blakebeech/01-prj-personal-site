@@ -1,5 +1,5 @@
 /*
-  Blake Beecher — One Page Portfolio
+  Blake Beecher - One Page Portfolio
   Simple, beginner-friendly CSS with comments.
 */
 
@@ -119,6 +119,8 @@ a:hover {
   font-weight: 600;
   border: 2px solid var(--accent);
   transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .btn-primary {
@@ -139,22 +141,6 @@ a:hover {
 
 .btn-outline:hover {
   background: #e0e7ff;
-}
-
-/* ---------- Skip link ---------- */
-.skip-link {
-  position: absolute;
-  left: 12px;
-  top: -40px;
-  background: var(--accent);
-  color: #ffffff;
-  padding: 10px 14px;
-  border-radius: 8px;
-  z-index: 999;
-}
-
-.skip-link:focus {
-  top: 12px;
 }
 
 /* ---------- Navigation ---------- */
@@ -345,14 +331,48 @@ h1 {
   .nav-links {
     width: 100%;
   }
+
+  .hero-image img {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .section {
     padding: 50px 0;
   }
 
   .hero {
     padding-top: 60px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .hero-grid > div,
+  .card-grid .card {
+    flex-basis: 100%;
+  }
+
+  .card-grid .card {
+    min-width: 0;
+  }
+
+  .nav-cta {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-cta .btn,
+  .hero-actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+    text-align: center;
   }
 }

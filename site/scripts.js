@@ -83,7 +83,7 @@ function injectNavFooter() {
           <a class="btn btn-outline" href="mailto:${siteConfig.email}">Email</a>
           <button class="btn btn-outline" data-copy-email>Copy Email</button>
           <a class="btn btn-outline" href="assets/Blake Beecher Resume - 2026.pdf">Resume</a>
-          <a class="footer-icon" href="https://www.linkedin.com/in/blake-beecher-66983b181/" aria-label="LinkedIn">
+          <a class="footer-icon" href="https://www.linkedin.com/in/blake-beecher-66983b181/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M6 9v9M6 6v.1" />
               <path d="M10 9v9M10 13a3 3 0 0 1 6 0v5" />
@@ -148,8 +148,12 @@ function initActiveNav() {
   }
 
   links.forEach((link) => {
+    link.removeAttribute("aria-current");
     if (link.dataset.page === activePage) {
       link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
     }
   });
 }
@@ -355,7 +359,7 @@ function initDemoForm() {
     const message = `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nMessage: ${data.get("message")}`;
 
     copyText(message).then(() => {
-      showToast("Thanks — message copied to clipboard");
+      showToast("Thanks - message copied to clipboard");
       form.reset();
     });
   });
@@ -379,6 +383,86 @@ function initScrollProgress() {
   updateProgress();
 }
 
+/* ---------- Media Lightbox (Home Project Cards) ---------- */
+function initMediaLightbox() {
+  const mediaNodes = document.querySelectorAll(
+    ".project-media-placeholder img, .project-media-placeholder video"
+  );
+  if (!mediaNodes.length) return;
+
+  let lightbox = document.querySelector(".media-lightbox");
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.className = "media-lightbox";
+    lightbox.setAttribute("aria-hidden", "true");
+    lightbox.innerHTML = `
+      <div class="media-lightbox-content" role="dialog" aria-modal="true" aria-label="Expanded media preview">
+        <button class="media-lightbox-close" type="button" aria-label="Close preview">×</button>
+        <div class="media-lightbox-media"></div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+  }
+
+  const mediaFrame = lightbox.querySelector(".media-lightbox-media");
+  const closeButton = lightbox.querySelector(".media-lightbox-close");
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    if (mediaFrame) mediaFrame.innerHTML = "";
+    document.body.style.overflow = "";
+  }
+
+  function openLightbox(sourceNode) {
+    if (!mediaFrame) return;
+    mediaFrame.innerHTML = "";
+
+    const clone = sourceNode.cloneNode(true);
+    if (clone.tagName === "VIDEO") {
+      clone.controls = true;
+      clone.muted = false;
+      clone.autoplay = false;
+      clone.playsInline = true;
+    }
+
+    mediaFrame.appendChild(clone);
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  mediaNodes.forEach((node) => {
+    node.setAttribute("tabindex", "0");
+    node.setAttribute("role", "button");
+    node.setAttribute("aria-label", "Expand media");
+
+    node.addEventListener("click", () => openLightbox(node));
+    node.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(node);
+      }
+    });
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  if (closeButton) {
+    closeButton.addEventListener("click", closeLightbox);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+}
+
 /* ---------- Init ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   injectNavFooter();
@@ -392,4 +476,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCopyButtons();
   initDemoForm();
   initScrollProgress();
+  initMediaLightbox();
 });
