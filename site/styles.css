@@ -103,11 +103,20 @@ a:hover {
 
 .section {
   /* Extra breathing room between sections */
-  padding: 80px 0;
+  padding: 64px 0;
+}
+
+/* Homepage-only tighter spacing between key sections */
+.section-home-tight {
+  padding: 44px 0;
+}
+
+#recruiters-should-know {
+  scroll-margin-top: 96px;
 }
 
 .page-header {
-  padding-top: 90px;
+  padding-top: 78px;
 }
 
 .section-header {
@@ -351,22 +360,38 @@ a:hover {
   padding-top: 90px;
 }
 
+.hero-full {
+  padding: 0;
+}
+
+.hero-full .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
 .eyebrow {
   color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.4px;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.2;
+  font-size: clamp(2.3rem, 4.6vw, 3.65rem);
+  line-height: 1.16;
   margin-bottom: var(--space-2);
 }
 
 .lead {
-  font-size: 1.1rem;
-  margin-bottom: var(--space-1);
+  font-size: 1.12rem;
+  line-height: 1.65;
+  max-width: 64ch;
+  margin-bottom: 0;
 }
 
 .sublead {
@@ -384,8 +409,23 @@ h1 {
 .hero-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
-  align-items: center;
+  gap: clamp(56px, 6vw, 88px);
+  align-items: stretch;
+  flex: 1;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  gap: 10px;
+}
+
+.hero-cta-row {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-2);
 }
 
 .hero-grid > div {
@@ -394,10 +434,19 @@ h1 {
 
 .hero-image img {
   width: 100%;
-  max-width: 320px;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.hero-image {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  height: 100%;
 }
 
 /* Simple image framing */
@@ -912,6 +961,21 @@ figure.card figcaption {
 
   .hero-image img {
     margin: 0 auto;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .hero-full .container {
+    min-height: calc(100vh - 116px);
+  }
+
+  .hero-full .container {
+    padding-top: 72px;
+    padding-bottom: 16px;
+  }
+
+  #recruiters-should-know {
+    scroll-margin-top: 116px;
   }
 }
 
@@ -922,16 +986,46 @@ figure.card figcaption {
   }
 
   .section {
-    padding: 50px 0;
+    padding: 40px 0;
+  }
+
+  .section-home-tight {
+    padding: 30px 0;
   }
 
   .hero,
   .page-header {
-    padding-top: 70px;
+    padding-top: 62px;
+  }
+
+  .hero-full .container {
+    min-height: calc(100vh - 108px);
+  }
+
+  .hero-full .container {
+    padding-top: 62px;
+    padding-bottom: 14px;
+  }
+
+  #recruiters-should-know {
+    scroll-margin-top: 84px;
   }
 
   h1 {
     font-size: 1.9rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 6px;
+  }
+
+  .hero-copy {
+    gap: 8px;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 1.65;
   }
 
   .card {
@@ -943,6 +1037,11 @@ figure.card figcaption {
   .grid-3 > *,
   .grid-4 > * {
     flex-basis: 100%;
+  }
+
+  .hero-copy {
+    justify-content: center;
+    min-height: auto;
   }
 
   .proof-card,
